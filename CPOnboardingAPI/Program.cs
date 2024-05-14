@@ -1,3 +1,5 @@
+using CPOnboardingAPI.Data;
+using CPOnboardingAPI.Mappers;
 using CPOnboardingAPI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -18,6 +20,8 @@ builder.Services.AddSwaggerGen(c =>
 
 });
 builder.Services.AddSingleton<CosmosDbClient>();
+builder.Services.AddScoped<IRepository, Repository>();
+builder.Services.AddAutoMapper(typeof(MappingProfile));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
