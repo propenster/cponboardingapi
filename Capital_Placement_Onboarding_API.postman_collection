@@ -1,0 +1,654 @@
+{
+	"info": {
+		"_postman_id": "35862719-2458-4179-9549-56d0d73b89b7",
+		"name": "Capital Placement Onboarding API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11633503"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "Employeer",
+					"item": [
+						{
+							"name": "templates",
+							"item": [
+								{
+									"name": "questiontypes",
+									"item": [
+										{
+											"name": "Get all types",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/Employeer/templates/questiontypes",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Employeer",
+														"templates",
+														"questiontypes"
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/Employeer/templates/questiontypes",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"Employeer",
+																"templates",
+																"questiontypes"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "[\n  \"<string>\",\n  \"<string>\"\n]"
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "{id}",
+									"item": [
+										{
+											"name": "Get an application template",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/Employeer/templates/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Employeer",
+														"templates",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "0cafa232-1a76-4860-a1e4-68f43fb6b947",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Not Found",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/Employeer/templates/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"Employeer",
+																"templates",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id"
+																}
+															]
+														}
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"type\": \"<string>\",\n  \"title\": \"<string>\",\n  \"status\": \"<integer>\",\n  \"detail\": \"<string>\",\n  \"instance\": \"<string>\"\n}"
+												},
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/Employeer/templates/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"Employeer",
+																"templates",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id",
+																	"value": "0cafa232-1a76-4860-a1e4-68f43fb6b947",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json; charset=utf-8"
+														},
+														{
+															"key": "Date",
+															"value": "Tue, 14 May 2024 13:07:32 GMT"
+														},
+														{
+															"key": "Server",
+															"value": "Kestrel"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														}
+													],
+													"cookie": [],
+													"body": "{\n    \"id\": \"0cafa232-1a76-4860-a1e4-68f43fb6b947\",\n    \"isInternal\": true,\n    \"isVisible\": true,\n    \"title\": \"This is my first application template as EmployerA007\",\n    \"description\": \"This is a brief description of this job... A fast-growing fortune 500 company needs a highly-skilled software developer in the Moscow team. We are looking for someone skilled in C#, JAVA, Rust programming, an avid open-source contributor and someone who has worked extensively in enterprise software solutions development and have written parsers and compilers before. Also, his name must be Faith Olusegun\",\n    \"firstName\": {\n        \"id\": \"4c76c21d-fbf6-4b17-837b-0c8cee929b2a\",\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"paragraph\",\n        \"name\": \"firstNameQ\",\n        \"title\": \"First Name\",\n        \"isRequired\": true\n    },\n    \"lastName\": {\n        \"id\": \"0248aaec-3f05-4074-8376-2028b812b1e3\",\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"paragraph\",\n        \"name\": \"lastNameQ\",\n        \"title\": \"Last Name\",\n        \"isRequired\": true\n    },\n    \"email\": {\n        \"id\": \"1b5640b9-b711-411b-a407-a6e5cf1bf6b7\",\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"paragraph\",\n        \"name\": \"emailQ\",\n        \"title\": \"Email\",\n        \"isRequired\": true\n    },\n    \"phone\": {\n        \"id\": \"cbebf9f1-3aab-4f4f-bc39-b9bb87dd79d7\",\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"paragraph\",\n        \"name\": \"phoneQ\",\n        \"title\": \"Phone (without dial code)\",\n        \"isRequired\": true\n    },\n    \"nationality\": {\n        \"id\": \"70b0ad31-08e2-4082-b6ab-ce11bd1d82e9\",\n        \"options\": [\n            {\n                \"text\": \"Nigeria\",\n                \"value\": \"nigeria\"\n            },\n            {\n                \"text\": \"Great Britain\",\n                \"value\": \"great britain\"\n            },\n            {\n                \"text\": \"India\",\n                \"value\": \"india\"\n            },\n            {\n                \"text\": \"Switzerland\",\n                \"value\": \"switzerland\"\n            },\n            {\n                \"text\": \"United States of America\",\n                \"value\": \"usa\"\n            }\n        ],\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"dropdown\",\n        \"name\": \"nationalityQ\",\n        \"title\": \"Nationality\",\n        \"isRequired\": true\n    },\n    \"currentResidence\": {\n        \"id\": \"404a437e-b7d5-4721-bcbe-473ba6bcd50e\",\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"paragraph\",\n        \"name\": \"currentResidenceQ\",\n        \"title\": \"Current Residence\",\n        \"isRequired\": true\n    },\n    \"idNumber\": {\n        \"id\": \"34645e72-3309-4704-b017-200658ec1a21\",\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"paragraph\",\n        \"name\": \"idNumberQ\",\n        \"title\": \"ID Number\",\n        \"isRequired\": true\n    },\n    \"dateOfBirth\": {\n        \"id\": \"1cf9a354-68a6-4c58-b99b-00e8a5e68d79\",\n        \"value\": \"0001-01-01T00:00:00\",\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"date\",\n        \"name\": \"dateOfBirthQ\",\n        \"title\": \"Date of Birth\",\n        \"isRequired\": true,\n        \"dateValue\": \"0001-01-01T00:00:00\"\n    },\n    \"gender\": {\n        \"id\": \"b2a4f130-4f40-4fd1-8a84-69108dd06082\",\n        \"options\": [\n            {\n                \"text\": \"Female\",\n                \"value\": \"female\"\n            },\n            {\n                \"text\": \"Male\",\n                \"value\": \"male\"\n            },\n            {\n                \"text\": \"Prefer not to say\",\n                \"value\": \"prefer not to say\"\n            }\n        ],\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"dropdown\",\n        \"name\": \"genderQ\",\n        \"title\": \"Gender\",\n        \"isRequired\": true\n    },\n    \"customQuestions\": [\n        {\n            \"id\": \"aa700d61-4aff-455c-8abe-34da603177f8\",\n            \"isInternal\": true,\n            \"isVisible\": true,\n            \"type\": \"paragraph\",\n            \"name\": \"tellMeAboutYouQ\",\n            \"title\": \"Please tell me about yourself in less than 500 words\",\n            \"isRequired\": true\n        },\n        {\n            \"id\": \"96d84a66-c57d-4a11-8646-3663c4a62eea\",\n            \"isInternal\": true,\n            \"isVisible\": true,\n            \"type\": \"dropdown\",\n            \"name\": \"graduationYearQ\",\n            \"title\": \"Please select the year of graduation from the list below\",\n            \"isRequired\": true\n        },\n        {\n            \"id\": \"d997d95c-7c86-474b-9fdb-937ecfa8310c\",\n            \"isInternal\": true,\n            \"isVisible\": true,\n            \"type\": \"yesorno\",\n            \"name\": \"everRejectedQ\",\n            \"title\": \"Have you ever been rejected by the UK embassy\",\n            \"isRequired\": true\n        },\n        {\n            \"id\": \"0fda2061-98ab-46cd-b6f0-1a287ad542c3\",\n            \"isInternal\": true,\n            \"isVisible\": true,\n            \"type\": \"dropdown\",\n            \"name\": \"skillsQ\",\n            \"title\": \"Please select at least 3 answers from the skills dropdown below\",\n            \"isRequired\": true\n        },\n        {\n            \"id\": \"8f452e52-8337-427b-87dc-73011ad4b2da\",\n            \"isInternal\": true,\n            \"isVisible\": true,\n            \"type\": \"number\",\n            \"name\": \"numberOfExperienceQ\",\n            \"title\": \"How many years of experience do you have, please enter the number below\",\n            \"isRequired\": true\n        },\n        {\n            \"id\": \"c3233f39-280d-41d5-ab06-1cb19d1de1fe\",\n            \"isInternal\": true,\n            \"isVisible\": true,\n            \"type\": \"date\",\n            \"name\": \"dateOfMovingToTheUKQ\",\n            \"title\": \"Please provide the date that you have moved to the UK\",\n            \"isRequired\": true\n        }\n    ]\n}"
+												}
+											]
+										},
+										{
+											"name": "Update an application template",
+											"request": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"isInternal\": true,\n    \"isVisible\": true,\n    \"title\": \"This is my first application template as EmployerA007 Updated today 14th May 2024\",\n    \"description\": \"This is a brief description of this job... A fast-growing fortune 500 company needs a highly-skilled software developer in the Moscow team. We are looking for someone skilled in C#, JAVA, Rust programming, an avid open-source contributor and someone who has worked extensively in enterprise software solutions development and have written parsers and compilers before. Also, his name must be Faith Olusegun\",\n    \"firstName\": {\n        \"id\": \"4c76c21d-fbf6-4b17-837b-0c8cee929b2a\",\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"paragraph\",\n        \"name\": \"firstNameQ\",\n        \"title\": \"First Name\",\n        \"isRequired\": true\n    },\n    \"lastName\": {\n        \"id\": \"0248aaec-3f05-4074-8376-2028b812b1e3\",\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"paragraph\",\n        \"name\": \"lastNameQ\",\n        \"title\": \"Last Name\",\n        \"isRequired\": true\n    },\n    \"email\": {\n        \"id\": \"1b5640b9-b711-411b-a407-a6e5cf1bf6b7\",\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"paragraph\",\n        \"name\": \"emailQ\",\n        \"title\": \"Email\",\n        \"isRequired\": true\n    },\n    \"phone\": {\n        \"id\": \"cbebf9f1-3aab-4f4f-bc39-b9bb87dd79d7\",\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"paragraph\",\n        \"name\": \"phoneQ\",\n        \"title\": \"Phone (without dial code)\",\n        \"isRequired\": true\n    },\n    \"nationality\": {\n        \"id\": \"70b0ad31-08e2-4082-b6ab-ce11bd1d82e9\",\n        \"options\": [\n            {\n                \"text\": \"Nigeria\",\n                \"value\": \"nigeria\"\n            },\n            {\n                \"text\": \"Great Britain\",\n                \"value\": \"great britain\"\n            },\n            {\n                \"text\": \"India\",\n                \"value\": \"india\"\n            },\n            {\n                \"text\": \"Switzerland\",\n                \"value\": \"switzerland\"\n            },\n            {\n                \"text\": \"United States of America\",\n                \"value\": \"usa\"\n            }\n        ],\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"dropdown\",\n        \"name\": \"nationalityQ\",\n        \"title\": \"Nationality\",\n        \"isRequired\": true\n    },\n    \"currentResidence\": {\n        \"id\": \"404a437e-b7d5-4721-bcbe-473ba6bcd50e\",\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"paragraph\",\n        \"name\": \"currentResidenceQ\",\n        \"title\": \"Current Residence\",\n        \"isRequired\": true\n    },\n    \"idNumber\": {\n        \"id\": \"34645e72-3309-4704-b017-200658ec1a21\",\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"paragraph\",\n        \"name\": \"idNumberQ\",\n        \"title\": \"ID Number\",\n        \"isRequired\": true\n    },\n    \"dateOfBirth\": {\n        \"id\": \"1cf9a354-68a6-4c58-b99b-00e8a5e68d79\",\n        \"value\": \"0001-01-01T00:00:00\",\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"date\",\n        \"name\": \"dateOfBirthQ\",\n        \"title\": \"Date of Birth\",\n        \"isRequired\": true,\n        \"dateValue\": \"0001-01-01T00:00:00\"\n    },\n    \"gender\": {\n        \"id\": \"b2a4f130-4f40-4fd1-8a84-69108dd06082\",\n        \"options\": [\n            {\n                \"text\": \"Female\",\n                \"value\": \"female\"\n            },\n            {\n                \"text\": \"Male\",\n                \"value\": \"male\"\n            },\n            {\n                \"text\": \"Prefer not to say\",\n                \"value\": \"prefer not to say\"\n            }\n        ],\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"dropdown\",\n        \"name\": \"genderQ\",\n        \"title\": \"Gender\",\n        \"isRequired\": true\n    },\n    \"customQuestions\": [\n        {\n            \"id\": \"aa700d61-4aff-455c-8abe-34da603177f8\",\n            \"isInternal\": true,\n            \"isVisible\": true,\n            \"type\": \"paragraph\",\n            \"name\": \"tellMeAboutYouQ\",\n            \"title\": \"Please tell me about yourself in less than 500 words\",\n            \"isRequired\": true\n        },\n        {\n            \"id\": \"96d84a66-c57d-4a11-8646-3663c4a62eea\",\n            \"isInternal\": true,\n            \"isVisible\": true,\n            \"type\": \"dropdown\",\n            \"name\": \"graduationYearQ\",\n            \"title\": \"Please select the year of graduation from the list below\",\n            \"isRequired\": true\n        },\n        {\n            \"id\": \"d997d95c-7c86-474b-9fdb-937ecfa8310c\",\n            \"isInternal\": true,\n            \"isVisible\": true,\n            \"type\": \"yesorno\",\n            \"name\": \"everRejectedQ\",\n            \"title\": \"Have you ever been rejected by the UK embassy\",\n            \"isRequired\": true\n        },\n        {\n            \"id\": \"0fda2061-98ab-46cd-b6f0-1a287ad542c3\",\n            \"isInternal\": true,\n            \"isVisible\": true,\n            \"type\": \"dropdown\",\n            \"name\": \"skillsQ\",\n            \"title\": \"Please select at least 3 answers from the skills dropdown below\",\n            \"isRequired\": true\n        },\n        {\n            \"id\": \"8f452e52-8337-427b-87dc-73011ad4b2da\",\n            \"isInternal\": true,\n            \"isVisible\": true,\n            \"type\": \"number\",\n            \"name\": \"numberOfExperienceQ\",\n            \"title\": \"How many years of experience do you have, please enter the number below\",\n            \"isRequired\": true\n        },\n        {\n            \"id\": \"c3233f39-280d-41d5-ab06-1cb19d1de1fe\",\n            \"isInternal\": true,\n            \"isVisible\": true,\n            \"type\": \"date\",\n            \"name\": \"dateOfMovingToTheUKQ\",\n            \"title\": \"Please provide the date that you have moved to the UK\",\n            \"isRequired\": true\n        }\n    ]\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/Employeer/templates/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Employeer",
+														"templates",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "0cafa232-1a76-4860-a1e4-68f43fb6b947",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n    \"isInternal\": true,\n    \"isVisible\": true,\n    \"title\": \"This is my first application template as EmployerA007 Updated today 14th May 2024\",\n    \"description\": \"This is a brief description of this job... A fast-growing fortune 500 company needs a highly-skilled software developer in the Moscow team. We are looking for someone skilled in C#, JAVA, Rust programming, an avid open-source contributor and someone who has worked extensively in enterprise software solutions development and have written parsers and compilers before. Also, his name must be Faith Olusegun\",\n    \"firstName\": {\n        \"id\": \"4c76c21d-fbf6-4b17-837b-0c8cee929b2a\",\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"paragraph\",\n        \"name\": \"firstNameQ\",\n        \"title\": \"First Name\",\n        \"isRequired\": true\n    },\n    \"lastName\": {\n        \"id\": \"0248aaec-3f05-4074-8376-2028b812b1e3\",\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"paragraph\",\n        \"name\": \"lastNameQ\",\n        \"title\": \"Last Name\",\n        \"isRequired\": true\n    },\n    \"email\": {\n        \"id\": \"1b5640b9-b711-411b-a407-a6e5cf1bf6b7\",\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"paragraph\",\n        \"name\": \"emailQ\",\n        \"title\": \"Email\",\n        \"isRequired\": true\n    },\n    \"phone\": {\n        \"id\": \"cbebf9f1-3aab-4f4f-bc39-b9bb87dd79d7\",\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"paragraph\",\n        \"name\": \"phoneQ\",\n        \"title\": \"Phone (without dial code)\",\n        \"isRequired\": true\n    },\n    \"nationality\": {\n        \"id\": \"70b0ad31-08e2-4082-b6ab-ce11bd1d82e9\",\n        \"options\": [\n            {\n                \"text\": \"Nigeria\",\n                \"value\": \"nigeria\"\n            },\n            {\n                \"text\": \"Great Britain\",\n                \"value\": \"great britain\"\n            },\n            {\n                \"text\": \"India\",\n                \"value\": \"india\"\n            },\n            {\n                \"text\": \"Switzerland\",\n                \"value\": \"switzerland\"\n            },\n            {\n                \"text\": \"United States of America\",\n                \"value\": \"usa\"\n            }\n        ],\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"dropdown\",\n        \"name\": \"nationalityQ\",\n        \"title\": \"Nationality\",\n        \"isRequired\": true\n    },\n    \"currentResidence\": {\n        \"id\": \"404a437e-b7d5-4721-bcbe-473ba6bcd50e\",\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"paragraph\",\n        \"name\": \"currentResidenceQ\",\n        \"title\": \"Current Residence\",\n        \"isRequired\": true\n    },\n    \"idNumber\": {\n        \"id\": \"34645e72-3309-4704-b017-200658ec1a21\",\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"paragraph\",\n        \"name\": \"idNumberQ\",\n        \"title\": \"ID Number\",\n        \"isRequired\": true\n    },\n    \"dateOfBirth\": {\n        \"id\": \"1cf9a354-68a6-4c58-b99b-00e8a5e68d79\",\n        \"value\": \"0001-01-01T00:00:00\",\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"date\",\n        \"name\": \"dateOfBirthQ\",\n        \"title\": \"Date of Birth\",\n        \"isRequired\": true,\n        \"dateValue\": \"0001-01-01T00:00:00\"\n    },\n    \"gender\": {\n        \"id\": \"b2a4f130-4f40-4fd1-8a84-69108dd06082\",\n        \"options\": [\n            {\n                \"text\": \"Female\",\n                \"value\": \"female\"\n            },\n            {\n                \"text\": \"Male\",\n                \"value\": \"male\"\n            },\n            {\n                \"text\": \"Prefer not to say\",\n                \"value\": \"prefer not to say\"\n            }\n        ],\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"dropdown\",\n        \"name\": \"genderQ\",\n        \"title\": \"Gender\",\n        \"isRequired\": true\n    },\n    \"customQuestions\": [\n        {\n            \"id\": \"aa700d61-4aff-455c-8abe-34da603177f8\",\n            \"isInternal\": true,\n            \"isVisible\": true,\n            \"type\": \"paragraph\",\n            \"name\": \"tellMeAboutYouQ\",\n            \"title\": \"Please tell me about yourself in less than 500 words\",\n            \"isRequired\": true\n        },\n        {\n            \"id\": \"96d84a66-c57d-4a11-8646-3663c4a62eea\",\n            \"isInternal\": true,\n            \"isVisible\": true,\n            \"type\": \"dropdown\",\n            \"name\": \"graduationYearQ\",\n            \"title\": \"Please select the year of graduation from the list below\",\n            \"isRequired\": true\n        },\n        {\n            \"id\": \"d997d95c-7c86-474b-9fdb-937ecfa8310c\",\n            \"isInternal\": true,\n            \"isVisible\": true,\n            \"type\": \"yesorno\",\n            \"name\": \"everRejectedQ\",\n            \"title\": \"Have you ever been rejected by the UK embassy\",\n            \"isRequired\": true\n        },\n        {\n            \"id\": \"0fda2061-98ab-46cd-b6f0-1a287ad542c3\",\n            \"isInternal\": true,\n            \"isVisible\": true,\n            \"type\": \"dropdown\",\n            \"name\": \"skillsQ\",\n            \"title\": \"Please select at least 3 answers from the skills dropdown below\",\n            \"isRequired\": true\n        },\n        {\n            \"id\": \"8f452e52-8337-427b-87dc-73011ad4b2da\",\n            \"isInternal\": true,\n            \"isVisible\": true,\n            \"type\": \"number\",\n            \"name\": \"numberOfExperienceQ\",\n            \"title\": \"How many years of experience do you have, please enter the number below\",\n            \"isRequired\": true\n        },\n        {\n            \"id\": \"c3233f39-280d-41d5-ab06-1cb19d1de1fe\",\n            \"isInternal\": true,\n            \"isVisible\": true,\n            \"type\": \"date\",\n            \"name\": \"dateOfMovingToTheUKQ\",\n            \"title\": \"Please provide the date that you have moved to the UK\",\n            \"isRequired\": true\n        }\n    ]\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/Employeer/templates/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"Employeer",
+																"templates",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id",
+																	"value": "0cafa232-1a76-4860-a1e4-68f43fb6b947",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json; charset=utf-8"
+														},
+														{
+															"key": "Date",
+															"value": "Tue, 14 May 2024 13:17:55 GMT"
+														},
+														{
+															"key": "Server",
+															"value": "Kestrel"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														}
+													],
+													"cookie": [],
+													"body": "{\n    \"id\": \"0ae01722-b34f-490c-b02d-3fbb2a6ac73d\",\n    \"isInternal\": true,\n    \"isVisible\": true,\n    \"title\": \"This is my first application template as EmployerA007 Updated today 14th May 2024\",\n    \"description\": \"This is a brief description of this job... A fast-growing fortune 500 company needs a highly-skilled software developer in the Moscow team. We are looking for someone skilled in C#, JAVA, Rust programming, an avid open-source contributor and someone who has worked extensively in enterprise software solutions development and have written parsers and compilers before. Also, his name must be Faith Olusegun\",\n    \"firstName\": {\n        \"id\": \"02a53de4-2c8f-4196-ac95-3550ac115af8\",\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"paragraph\",\n        \"name\": \"firstNameQ\",\n        \"title\": \"First Name\",\n        \"isRequired\": true\n    },\n    \"lastName\": {\n        \"id\": \"121d8b6e-0c86-4761-b9b7-1d974fd7981c\",\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"paragraph\",\n        \"name\": \"lastNameQ\",\n        \"title\": \"Last Name\",\n        \"isRequired\": true\n    },\n    \"email\": {\n        \"id\": \"2edaee26-bc52-41ac-834c-188f41f81532\",\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"paragraph\",\n        \"name\": \"emailQ\",\n        \"title\": \"Email\",\n        \"isRequired\": true\n    },\n    \"phone\": {\n        \"id\": \"f298e4f4-e64a-45fe-98e3-3d06ddb13093\",\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"paragraph\",\n        \"name\": \"phoneQ\",\n        \"title\": \"Phone (without dial code)\",\n        \"isRequired\": true\n    },\n    \"nationality\": {\n        \"id\": \"c592874b-05f5-4641-8872-7217fcacff58\",\n        \"options\": [\n            {\n                \"text\": \"Nigeria\",\n                \"value\": \"nigeria\"\n            },\n            {\n                \"text\": \"Great Britain\",\n                \"value\": \"great britain\"\n            },\n            {\n                \"text\": \"India\",\n                \"value\": \"india\"\n            },\n            {\n                \"text\": \"Switzerland\",\n                \"value\": \"switzerland\"\n            },\n            {\n                \"text\": \"United States of America\",\n                \"value\": \"usa\"\n            }\n        ],\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"dropdown\",\n        \"name\": \"nationalityQ\",\n        \"title\": \"Nationality\",\n        \"isRequired\": true\n    },\n    \"currentResidence\": {\n        \"id\": \"28e938b6-fa0f-48fc-b2ff-825ebdfb3593\",\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"paragraph\",\n        \"name\": \"currentResidenceQ\",\n        \"title\": \"Current Residence\",\n        \"isRequired\": true\n    },\n    \"idNumber\": {\n        \"id\": \"e92bd358-b82d-4082-8724-7875ac4739b7\",\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"paragraph\",\n        \"name\": \"idNumberQ\",\n        \"title\": \"ID Number\",\n        \"isRequired\": true\n    },\n    \"dateOfBirth\": {\n        \"id\": \"b98cd433-abd0-4958-a7c4-2351bb2e4620\",\n        \"value\": \"0001-01-01T00:00:00\",\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"date\",\n        \"name\": \"dateOfBirthQ\",\n        \"title\": \"Date of Birth\",\n        \"isRequired\": true,\n        \"dateValue\": \"0001-01-01T00:00:00\"\n    },\n    \"gender\": {\n        \"id\": \"24aae403-e480-4f93-821f-e511e3f3f4dc\",\n        \"options\": [\n            {\n                \"text\": \"Female\",\n                \"value\": \"female\"\n            },\n            {\n                \"text\": \"Male\",\n                \"value\": \"male\"\n            },\n            {\n                \"text\": \"Prefer not to say\",\n                \"value\": \"prefer not to say\"\n            }\n        ],\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"dropdown\",\n        \"name\": \"genderQ\",\n        \"title\": \"Gender\",\n        \"isRequired\": true\n    },\n    \"customQuestions\": [\n        {\n            \"id\": \"d39f5271-579c-42a2-985c-272e74588e90\",\n            \"isInternal\": true,\n            \"isVisible\": true,\n            \"type\": \"paragraph\",\n            \"name\": \"tellMeAboutYouQ\",\n            \"title\": \"Please tell me about yourself in less than 500 words\",\n            \"isRequired\": true\n        },\n        {\n            \"id\": \"bc71532e-3c8f-41ce-b585-b4957503af99\",\n            \"isInternal\": true,\n            \"isVisible\": true,\n            \"type\": \"dropdown\",\n            \"name\": \"graduationYearQ\",\n            \"title\": \"Please select the year of graduation from the list below\",\n            \"isRequired\": true\n        },\n        {\n            \"id\": \"cec3a923-6c0a-408c-add0-189d59011fc7\",\n            \"isInternal\": true,\n            \"isVisible\": true,\n            \"type\": \"yesorno\",\n            \"name\": \"everRejectedQ\",\n            \"title\": \"Have you ever been rejected by the UK embassy\",\n            \"isRequired\": true\n        },\n        {\n            \"id\": \"2809d8eb-2152-44af-9533-798fa2b318b3\",\n            \"isInternal\": true,\n            \"isVisible\": true,\n            \"type\": \"dropdown\",\n            \"name\": \"skillsQ\",\n            \"title\": \"Please select at least 3 answers from the skills dropdown below\",\n            \"isRequired\": true\n        },\n        {\n            \"id\": \"415a03eb-02f0-42b6-8698-ef31c21a8124\",\n            \"isInternal\": true,\n            \"isVisible\": true,\n            \"type\": \"number\",\n            \"name\": \"numberOfExperienceQ\",\n            \"title\": \"How many years of experience do you have, please enter the number below\",\n            \"isRequired\": true\n        },\n        {\n            \"id\": \"2446798f-7ffe-4651-b318-a199ee75b1a4\",\n            \"isInternal\": true,\n            \"isVisible\": true,\n            \"type\": \"date\",\n            \"name\": \"dateOfMovingToTheUKQ\",\n            \"title\": \"Please provide the date that you have moved to the UK\",\n            \"isRequired\": true\n        }\n    ]\n}"
+												}
+											]
+										},
+										{
+											"name": "Delete an application template",
+											"request": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/Employeer/templates/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Employeer",
+														"templates",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "0cafa232-1a76-4860-a1e4-68f43fb6b947",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "No Content",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/api/Employeer/templates/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"Employeer",
+																"templates",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id"
+																}
+															]
+														}
+													},
+													"status": "No Content",
+													"code": 204,
+													"_postman_previewlanguage": "text",
+													"header": [],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "Create a new application template",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"isInternal\": true,\n    \"isVisible\": true,\n    \"title\": \"This is my first application template as EmployerA007\",\n    \"description\": \"This is a brief description of this job... A fast-growing fortune 500 company needs a highly-skilled software developer in the Moscow team. We are looking for someone skilled in C#, JAVA, Rust programming, an avid open-source contributor and someone who has worked extensively in enterprise software solutions development and have written parsers and compilers before. Also, his name must be Faith Olusegun\",\n    \"firstName\": {\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"paragraph\",\n        \"name\": \"firstNameQ\",\n        \"title\": \"First Name\",\n        \"isRequired\": true\n    },\n    \"lastName\": {\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"paragraph\",\n        \"name\": \"lastNameQ\",\n        \"title\": \"Last Name\",\n        \"isRequired\": true\n    },\n    \"email\": {\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"paragraph\",\n        \"name\": \"emailQ\",\n        \"title\": \"Email\",\n        \"isRequired\": true\n    },\n    \"phone\": {\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"paragraph\",\n        \"name\": \"phoneQ\",\n        \"title\": \"Phone (without dial code)\",\n        \"isRequired\": true\n    },\n    \"nationality\": {\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"dropdown\",\n        \"name\": \"nationalityQ\",\n        \"title\": \"Nationality\",\n        \"isRequired\": true,\n        \"options\": [\n            {\n                \"text\": \"Nigeria\",\n                \"value\": \"nigeria\"\n            },\n            {\n                \"text\": \"Great Britain\",\n                \"value\": \"great britain\"\n            },\n            {\n                \"text\": \"India\",\n                \"value\": \"india\"\n            },\n            {\n                \"text\": \"Switzerland\",\n                \"value\": \"switzerland\"\n            },\n            {\n                \"text\": \"United States of America\",\n                \"value\": \"usa\"\n            }\n        ]\n    },\n    \"currentResidence\": {\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"paragraph\",\n        \"name\": \"currentResidenceQ\",\n        \"title\": \"Current Residence\",\n        \"isRequired\": true\n    },\n    \"idNumber\": {\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"paragraph\",\n        \"name\": \"idNumberQ\",\n        \"title\": \"ID Number\",\n        \"isRequired\": true\n    },\n    \"dateOfBirth\": {\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"date\",\n        \"name\": \"dateOfBirthQ\",\n        \"title\": \"Date of Birth\",\n        \"isRequired\": true,\n        \"value\": \"2024-05-14T11:13:24.059Z\"\n    },\n    \"gender\": {\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"dropdown\",\n        \"name\": \"genderQ\",\n        \"title\": \"Gender\",\n        \"isRequired\": true,\n        \"options\": [\n            {\n                \"text\": \"Female\",\n                \"value\": \"female\"\n            },\n            {\n                \"text\": \"Male\",\n                \"value\": \"male\"\n            },\n            {\n                \"text\": \"Prefer not to say\",\n                \"value\": \"prefer not to say\"\n            }\n        ]\n    },\n    \"customQuestions\": [\n        {\n            \"isInternal\": true,\n            \"isVisible\": true,\n            \"type\": \"paragraph\",\n            \"name\": \"tellMeAboutYouQ\",\n            \"title\": \"Please tell me about yourself in less than 500 words\",\n            \"isRequired\": true\n        },\n        {\n            \"isInternal\": true,\n            \"isVisible\": true,\n            \"type\": \"dropdown\",\n            \"name\": \"graduationYearQ\",\n            \"title\": \"Please select the year of graduation from the list below\",\n            \"isRequired\": true,\n            \"options\": [\n                {\n                    \"text\": \"2022\",\n                    \"value\": \"2022\"\n                },\n                {\n                    \"text\": \"2020\",\n                    \"value\": \"2020\"\n                },\n                {\n                    \"text\": \"2018\",\n                    \"value\": \"2018\"\n                },\n                {\n                    \"text\": \"2016\",\n                    \"value\": \"2016\"\n                }\n            ]\n        },\n        {\n            \"isInternal\": true,\n            \"isVisible\": true,\n            \"type\": \"yesorno\",\n            \"name\": \"everRejectedQ\",\n            \"title\": \"Have you ever been rejected by the UK embassy\",\n            \"isRequired\": true,\n            \"options\": [\n                {\n                    \"text\": \"Yes\",\n                    \"value\": \"yes\"\n                },\n                {\n                    \"text\": \"No\",\n                    \"value\": \"no\"\n                }\n            ]\n        },\n        {\n            \"isInternal\": true,\n            \"isVisible\": true,\n            \"type\": \"dropdown\",\n            \"name\": \"skillsQ\",\n            \"title\": \"Please select at least 3 answers from the skills dropdown below\",\n            \"isRequired\": true,\n            \"options\": [\n                {\n                    \"text\": \"C#\",\n                    \"value\": \"C#\"\n                },\n                {\n                    \"text\": \"Software Development\",\n                    \"value\": \"software development\"\n                },\n                {\n                    \"text\": \"Project Management\",\n                    \"value\": \"project management\"\n                },\n                {\n                    \"text\": \"ASP.NET Core Development\",\n                    \"value\": \"asp.net core development\"\n                },\n                {\n                    \"text\": \"API Testing\",\n                    \"value\": \"api testing\"\n                },\n                {\n                    \"text\": \"Git\",\n                    \"value\": \"git\"\n                }\n            ]\n        },\n        {\n            \"isInternal\": true,\n            \"isVisible\": true,\n            \"type\": \"number\",\n            \"name\": \"numberOfExperienceQ\",\n            \"title\": \"How many years of experience do you have, please enter the number below\",\n            \"isRequired\": true\n        },\n        {\n            \"isInternal\": true,\n            \"isVisible\": true,\n            \"type\": \"date\",\n            \"name\": \"dateOfMovingToTheUKQ\",\n            \"title\": \"Please provide the date that you have moved to the UK\",\n            \"isRequired\": true\n        }\n    ]\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Employeer/templates",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Employeer",
+												"templates"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"isInternal\": true,\n    \"isVisible\": true,\n    \"title\": \"This is my first application template as EmployerA007\",\n    \"description\": \"This is a brief description of this job... A fast-growing fortune 500 company needs a highly-skilled software developer in the Moscow team. We are looking for someone skilled in C#, JAVA, Rust programming, an avid open-source contributor and someone who has worked extensively in enterprise software solutions development and have written parsers and compilers before. Also, his name must be Faith Olusegun\",\n    \"firstName\": {\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"paragraph\",\n        \"name\": \"firstNameQ\",\n        \"title\": \"First Name\",\n        \"isRequired\": true\n    },\n    \"lastName\": {\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"paragraph\",\n        \"name\": \"lastNameQ\",\n        \"title\": \"Last Name\",\n        \"isRequired\": true\n    },\n    \"email\": {\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"paragraph\",\n        \"name\": \"emailQ\",\n        \"title\": \"Email\",\n        \"isRequired\": true\n    },\n    \"phone\": {\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"paragraph\",\n        \"name\": \"phoneQ\",\n        \"title\": \"Phone (without dial code)\",\n        \"isRequired\": true\n    },\n    \"nationality\": {\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"dropdown\",\n        \"name\": \"nationalityQ\",\n        \"title\": \"Nationality\",\n        \"isRequired\": true,\n        \"options\": [\n            {\n                \"text\": \"Nigeria\",\n                \"value\": \"nigeria\"\n            },\n            {\n                \"text\": \"Great Britain\",\n                \"value\": \"great britain\"\n            },\n            {\n                \"text\": \"India\",\n                \"value\": \"india\"\n            },\n            {\n                \"text\": \"Switzerland\",\n                \"value\": \"switzerland\"\n            },\n            {\n                \"text\": \"United States of America\",\n                \"value\": \"usa\"\n            }\n        ]\n    },\n    \"currentResidence\": {\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"paragraph\",\n        \"name\": \"currentResidenceQ\",\n        \"title\": \"Current Residence\",\n        \"isRequired\": true\n    },\n    \"idNumber\": {\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"paragraph\",\n        \"name\": \"idNumberQ\",\n        \"title\": \"ID Number\",\n        \"isRequired\": true\n    },\n    \"dateOfBirth\": {\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"date\",\n        \"name\": \"dateOfBirthQ\",\n        \"title\": \"Date of Birth\",\n        \"isRequired\": true,\n        \"value\": \"2024-05-14T11:13:24.059Z\"\n    },\n    \"gender\": {\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"dropdown\",\n        \"name\": \"genderQ\",\n        \"title\": \"Gender\",\n        \"isRequired\": true,\n        \"options\": [\n            {\n                \"text\": \"Female\",\n                \"value\": \"female\"\n            },\n            {\n                \"text\": \"Male\",\n                \"value\": \"male\"\n            },\n            {\n                \"text\": \"Prefer not to say\",\n                \"value\": \"prefer not to say\"\n            }\n        ]\n    },\n    \"customQuestions\": [\n        {\n            \"isInternal\": true,\n            \"isVisible\": true,\n            \"type\": \"paragraph\",\n            \"name\": \"tellMeAboutYouQ\",\n            \"title\": \"Please tell me about yourself in less than 500 words\",\n            \"isRequired\": true\n        },\n        {\n            \"isInternal\": true,\n            \"isVisible\": true,\n            \"type\": \"dropdown\",\n            \"name\": \"graduationYearQ\",\n            \"title\": \"Please select the year of graduation from the list below\",\n            \"isRequired\": true,\n            \"options\": [\n                {\n                    \"text\": \"2022\",\n                    \"value\": \"2022\"\n                },\n                {\n                    \"text\": \"2020\",\n                    \"value\": \"2020\"\n                },\n                {\n                    \"text\": \"2018\",\n                    \"value\": \"2018\"\n                },\n                {\n                    \"text\": \"2016\",\n                    \"value\": \"2016\"\n                }\n            ]\n        },\n        {\n            \"isInternal\": true,\n            \"isVisible\": true,\n            \"type\": \"yesorno\",\n            \"name\": \"everRejectedQ\",\n            \"title\": \"Have you ever been rejected by the UK embassy\",\n            \"isRequired\": true,\n            \"options\": [\n                {\n                    \"text\": \"Yes\",\n                    \"value\": \"yes\"\n                },\n                {\n                    \"text\": \"No\",\n                    \"value\": \"no\"\n                }\n            ]\n        },\n        {\n            \"isInternal\": true,\n            \"isVisible\": true,\n            \"type\": \"dropdown\",\n            \"name\": \"skillsQ\",\n            \"title\": \"Please select at least 3 answers from the skills dropdown below\",\n            \"isRequired\": true,\n            \"options\": [\n                {\n                    \"text\": \"C#\",\n                    \"value\": \"C#\"\n                },\n                {\n                    \"text\": \"Software Development\",\n                    \"value\": \"software development\"\n                },\n                {\n                    \"text\": \"Project Management\",\n                    \"value\": \"project management\"\n                },\n                {\n                    \"text\": \"ASP.NET Core Development\",\n                    \"value\": \"asp.net core development\"\n                },\n                {\n                    \"text\": \"API Testing\",\n                    \"value\": \"api testing\"\n                },\n                {\n                    \"text\": \"Git\",\n                    \"value\": \"git\"\n                }\n            ]\n        },\n        {\n            \"isInternal\": true,\n            \"isVisible\": true,\n            \"type\": \"number\",\n            \"name\": \"numberOfExperienceQ\",\n            \"title\": \"How many years of experience do you have, please enter the number below\",\n            \"isRequired\": true\n        },\n        {\n            \"isInternal\": true,\n            \"isVisible\": true,\n            \"type\": \"date\",\n            \"name\": \"dateOfMovingToTheUKQ\",\n            \"title\": \"Please provide the date that you have moved to the UK\",\n            \"isRequired\": true\n        }\n    ]\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/Employeer/templates",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Employeer",
+														"templates"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 14 May 2024 13:05:41 GMT"
+												},
+												{
+													"key": "Server",
+													"value": "Kestrel"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"id\": \"0cafa232-1a76-4860-a1e4-68f43fb6b947\",\n    \"isInternal\": true,\n    \"isVisible\": true,\n    \"title\": \"This is my first application template as EmployerA007\",\n    \"description\": \"This is a brief description of this job... A fast-growing fortune 500 company needs a highly-skilled software developer in the Moscow team. We are looking for someone skilled in C#, JAVA, Rust programming, an avid open-source contributor and someone who has worked extensively in enterprise software solutions development and have written parsers and compilers before. Also, his name must be Faith Olusegun\",\n    \"firstName\": {\n        \"id\": \"4c76c21d-fbf6-4b17-837b-0c8cee929b2a\",\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"paragraph\",\n        \"name\": \"firstNameQ\",\n        \"title\": \"First Name\",\n        \"isRequired\": true\n    },\n    \"lastName\": {\n        \"id\": \"0248aaec-3f05-4074-8376-2028b812b1e3\",\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"paragraph\",\n        \"name\": \"lastNameQ\",\n        \"title\": \"Last Name\",\n        \"isRequired\": true\n    },\n    \"email\": {\n        \"id\": \"1b5640b9-b711-411b-a407-a6e5cf1bf6b7\",\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"paragraph\",\n        \"name\": \"emailQ\",\n        \"title\": \"Email\",\n        \"isRequired\": true\n    },\n    \"phone\": {\n        \"id\": \"cbebf9f1-3aab-4f4f-bc39-b9bb87dd79d7\",\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"paragraph\",\n        \"name\": \"phoneQ\",\n        \"title\": \"Phone (without dial code)\",\n        \"isRequired\": true\n    },\n    \"nationality\": {\n        \"id\": \"70b0ad31-08e2-4082-b6ab-ce11bd1d82e9\",\n        \"options\": [\n            {\n                \"text\": \"Nigeria\",\n                \"value\": \"nigeria\"\n            },\n            {\n                \"text\": \"Great Britain\",\n                \"value\": \"great britain\"\n            },\n            {\n                \"text\": \"India\",\n                \"value\": \"india\"\n            },\n            {\n                \"text\": \"Switzerland\",\n                \"value\": \"switzerland\"\n            },\n            {\n                \"text\": \"United States of America\",\n                \"value\": \"usa\"\n            }\n        ],\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"dropdown\",\n        \"name\": \"nationalityQ\",\n        \"title\": \"Nationality\",\n        \"isRequired\": true\n    },\n    \"currentResidence\": {\n        \"id\": \"404a437e-b7d5-4721-bcbe-473ba6bcd50e\",\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"paragraph\",\n        \"name\": \"currentResidenceQ\",\n        \"title\": \"Current Residence\",\n        \"isRequired\": true\n    },\n    \"idNumber\": {\n        \"id\": \"34645e72-3309-4704-b017-200658ec1a21\",\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"paragraph\",\n        \"name\": \"idNumberQ\",\n        \"title\": \"ID Number\",\n        \"isRequired\": true\n    },\n    \"dateOfBirth\": {\n        \"id\": \"1cf9a354-68a6-4c58-b99b-00e8a5e68d79\",\n        \"value\": \"0001-01-01T00:00:00\",\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"date\",\n        \"name\": \"dateOfBirthQ\",\n        \"title\": \"Date of Birth\",\n        \"isRequired\": true,\n        \"dateValue\": \"0001-01-01T00:00:00\"\n    },\n    \"gender\": {\n        \"id\": \"b2a4f130-4f40-4fd1-8a84-69108dd06082\",\n        \"options\": [\n            {\n                \"text\": \"Female\",\n                \"value\": \"female\"\n            },\n            {\n                \"text\": \"Male\",\n                \"value\": \"male\"\n            },\n            {\n                \"text\": \"Prefer not to say\",\n                \"value\": \"prefer not to say\"\n            }\n        ],\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"type\": \"dropdown\",\n        \"name\": \"genderQ\",\n        \"title\": \"Gender\",\n        \"isRequired\": true\n    },\n    \"customQuestions\": [\n        {\n            \"id\": \"aa700d61-4aff-455c-8abe-34da603177f8\",\n            \"isInternal\": true,\n            \"isVisible\": true,\n            \"type\": \"paragraph\",\n            \"name\": \"tellMeAboutYouQ\",\n            \"title\": \"Please tell me about yourself in less than 500 words\",\n            \"isRequired\": true\n        },\n        {\n            \"id\": \"96d84a66-c57d-4a11-8646-3663c4a62eea\",\n            \"isInternal\": true,\n            \"isVisible\": true,\n            \"type\": \"dropdown\",\n            \"name\": \"graduationYearQ\",\n            \"title\": \"Please select the year of graduation from the list below\",\n            \"isRequired\": true\n        },\n        {\n            \"id\": \"d997d95c-7c86-474b-9fdb-937ecfa8310c\",\n            \"isInternal\": true,\n            \"isVisible\": true,\n            \"type\": \"yesorno\",\n            \"name\": \"everRejectedQ\",\n            \"title\": \"Have you ever been rejected by the UK embassy\",\n            \"isRequired\": true\n        },\n        {\n            \"id\": \"0fda2061-98ab-46cd-b6f0-1a287ad542c3\",\n            \"isInternal\": true,\n            \"isVisible\": true,\n            \"type\": \"dropdown\",\n            \"name\": \"skillsQ\",\n            \"title\": \"Please select at least 3 answers from the skills dropdown below\",\n            \"isRequired\": true\n        },\n        {\n            \"id\": \"8f452e52-8337-427b-87dc-73011ad4b2da\",\n            \"isInternal\": true,\n            \"isVisible\": true,\n            \"type\": \"number\",\n            \"name\": \"numberOfExperienceQ\",\n            \"title\": \"How many years of experience do you have, please enter the number below\",\n            \"isRequired\": true\n        },\n        {\n            \"id\": \"c3233f39-280d-41d5-ab06-1cb19d1de1fe\",\n            \"isInternal\": true,\n            \"isVisible\": true,\n            \"type\": \"date\",\n            \"name\": \"dateOfMovingToTheUKQ\",\n            \"title\": \"Please provide the date that you have moved to the UK\",\n            \"isRequired\": true\n        }\n    ]\n}"
+										}
+									]
+								},
+								{
+									"name": "Get all application templates in the DB",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/Employeer/templates",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Employeer",
+												"templates"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/Employeer/templates",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Employeer",
+														"templates"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 14 May 2024 13:06:32 GMT"
+												},
+												{
+													"key": "Server",
+													"value": "Kestrel"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												}
+											],
+											"cookie": [],
+											"body": "[\n    {\n        \"id\": \"0cafa232-1a76-4860-a1e4-68f43fb6b947\",\n        \"isInternal\": true,\n        \"isVisible\": true,\n        \"title\": \"This is my first application template as EmployerA007\",\n        \"description\": \"This is a brief description of this job... A fast-growing fortune 500 company needs a highly-skilled software developer in the Moscow team. We are looking for someone skilled in C#, JAVA, Rust programming, an avid open-source contributor and someone who has worked extensively in enterprise software solutions development and have written parsers and compilers before. Also, his name must be Faith Olusegun\",\n        \"firstName\": {\n            \"id\": \"4c76c21d-fbf6-4b17-837b-0c8cee929b2a\",\n            \"isInternal\": true,\n            \"isVisible\": true,\n            \"type\": \"paragraph\",\n            \"name\": \"firstNameQ\",\n            \"title\": \"First Name\",\n            \"isRequired\": true\n        },\n        \"lastName\": {\n            \"id\": \"0248aaec-3f05-4074-8376-2028b812b1e3\",\n            \"isInternal\": true,\n            \"isVisible\": true,\n            \"type\": \"paragraph\",\n            \"name\": \"lastNameQ\",\n            \"title\": \"Last Name\",\n            \"isRequired\": true\n        },\n        \"email\": {\n            \"id\": \"1b5640b9-b711-411b-a407-a6e5cf1bf6b7\",\n            \"isInternal\": true,\n            \"isVisible\": true,\n            \"type\": \"paragraph\",\n            \"name\": \"emailQ\",\n            \"title\": \"Email\",\n            \"isRequired\": true\n        },\n        \"phone\": {\n            \"id\": \"cbebf9f1-3aab-4f4f-bc39-b9bb87dd79d7\",\n            \"isInternal\": true,\n            \"isVisible\": true,\n            \"type\": \"paragraph\",\n            \"name\": \"phoneQ\",\n            \"title\": \"Phone (without dial code)\",\n            \"isRequired\": true\n        },\n        \"nationality\": {\n            \"id\": \"70b0ad31-08e2-4082-b6ab-ce11bd1d82e9\",\n            \"options\": [\n                {\n                    \"text\": \"Nigeria\",\n                    \"value\": \"nigeria\"\n                },\n                {\n                    \"text\": \"Great Britain\",\n                    \"value\": \"great britain\"\n                },\n                {\n                    \"text\": \"India\",\n                    \"value\": \"india\"\n                },\n                {\n                    \"text\": \"Switzerland\",\n                    \"value\": \"switzerland\"\n                },\n                {\n                    \"text\": \"United States of America\",\n                    \"value\": \"usa\"\n                }\n            ],\n            \"isInternal\": true,\n            \"isVisible\": true,\n            \"type\": \"dropdown\",\n            \"name\": \"nationalityQ\",\n            \"title\": \"Nationality\",\n            \"isRequired\": true\n        },\n        \"currentResidence\": {\n            \"id\": \"404a437e-b7d5-4721-bcbe-473ba6bcd50e\",\n            \"isInternal\": true,\n            \"isVisible\": true,\n            \"type\": \"paragraph\",\n            \"name\": \"currentResidenceQ\",\n            \"title\": \"Current Residence\",\n            \"isRequired\": true\n        },\n        \"idNumber\": {\n            \"id\": \"34645e72-3309-4704-b017-200658ec1a21\",\n            \"isInternal\": true,\n            \"isVisible\": true,\n            \"type\": \"paragraph\",\n            \"name\": \"idNumberQ\",\n            \"title\": \"ID Number\",\n            \"isRequired\": true\n        },\n        \"dateOfBirth\": {\n            \"id\": \"1cf9a354-68a6-4c58-b99b-00e8a5e68d79\",\n            \"value\": \"0001-01-01T00:00:00\",\n            \"isInternal\": true,\n            \"isVisible\": true,\n            \"type\": \"date\",\n            \"name\": \"dateOfBirthQ\",\n            \"title\": \"Date of Birth\",\n            \"isRequired\": true,\n            \"dateValue\": \"0001-01-01T00:00:00\"\n        },\n        \"gender\": {\n            \"id\": \"b2a4f130-4f40-4fd1-8a84-69108dd06082\",\n            \"options\": [\n                {\n                    \"text\": \"Female\",\n                    \"value\": \"female\"\n                },\n                {\n                    \"text\": \"Male\",\n                    \"value\": \"male\"\n                },\n                {\n                    \"text\": \"Prefer not to say\",\n                    \"value\": \"prefer not to say\"\n                }\n            ],\n            \"isInternal\": true,\n            \"isVisible\": true,\n            \"type\": \"dropdown\",\n            \"name\": \"genderQ\",\n            \"title\": \"Gender\",\n            \"isRequired\": true\n        },\n        \"customQuestions\": [\n            {\n                \"id\": \"aa700d61-4aff-455c-8abe-34da603177f8\",\n                \"isInternal\": true,\n                \"isVisible\": true,\n                \"type\": \"paragraph\",\n                \"name\": \"tellMeAboutYouQ\",\n                \"title\": \"Please tell me about yourself in less than 500 words\",\n                \"isRequired\": true\n            },\n            {\n                \"id\": \"96d84a66-c57d-4a11-8646-3663c4a62eea\",\n                \"isInternal\": true,\n                \"isVisible\": true,\n                \"type\": \"dropdown\",\n                \"name\": \"graduationYearQ\",\n                \"title\": \"Please select the year of graduation from the list below\",\n                \"isRequired\": true\n            },\n            {\n                \"id\": \"d997d95c-7c86-474b-9fdb-937ecfa8310c\",\n                \"isInternal\": true,\n                \"isVisible\": true,\n                \"type\": \"yesorno\",\n                \"name\": \"everRejectedQ\",\n                \"title\": \"Have you ever been rejected by the UK embassy\",\n                \"isRequired\": true\n            },\n            {\n                \"id\": \"0fda2061-98ab-46cd-b6f0-1a287ad542c3\",\n                \"isInternal\": true,\n                \"isVisible\": true,\n                \"type\": \"dropdown\",\n                \"name\": \"skillsQ\",\n                \"title\": \"Please select at least 3 answers from the skills dropdown below\",\n                \"isRequired\": true\n            },\n            {\n                \"id\": \"8f452e52-8337-427b-87dc-73011ad4b2da\",\n                \"isInternal\": true,\n                \"isVisible\": true,\n                \"type\": \"number\",\n                \"name\": \"numberOfExperienceQ\",\n                \"title\": \"How many years of experience do you have, please enter the number below\",\n                \"isRequired\": true\n            },\n            {\n                \"id\": \"c3233f39-280d-41d5-ab06-1cb19d1de1fe\",\n                \"isInternal\": true,\n                \"isVisible\": true,\n                \"type\": \"date\",\n                \"name\": \"dateOfMovingToTheUKQ\",\n                \"title\": \"Please provide the date that you have moved to the UK\",\n                \"isRequired\": true\n            }\n        ]\n    }\n]"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "WeatherForecast",
+			"item": [
+				{
+					"name": "Get Weather Forecast",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "text/plain"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/WeatherForecast",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"WeatherForecast"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "text/plain"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/WeatherForecast",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"WeatherForecast"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"date\": \"<date>\",\n    \"temperatureC\": \"<integer>\",\n    \"temperatureF\": \"<integer>\",\n    \"summary\": \"<string>\"\n  },\n  {\n    \"date\": \"<date>\",\n    \"temperatureC\": \"<integer>\",\n    \"temperatureF\": \"<integer>\",\n    \"summary\": \"<string>\"\n  }\n]"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://localhost:7239"
+		}
+	]
+}
