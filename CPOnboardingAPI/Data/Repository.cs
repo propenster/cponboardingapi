@@ -1,22 +1,24 @@
 ﻿using CPOnboardingAPI.Models;
-using CPOnboardingAPI.Services;
 using Microsoft.Azure.Cosmos;
 
 namespace CPOnboardingAPI.Data
 {
     public class Repository : IRepository
     {
-        private readonly CosmosDbClient _client;
+        private readonly Container _container;
 
-        public Repository(CosmosDbClient client)
+        public Repository(CosmosClient client, string dbName, string containerName)
         {
-            _client = client;
+            ArgumentNullException.ThrowIfNull(client);
+            ArgumentNullException.ThrowIfNullOrWhiteSpace(dbName);
+            ArgumentNullException.ThrowIfNullOrWhiteSpace(containerName);
+            _container = client.GetContainer(dbName, containerName);
+
         }
 
         public async Task<ApplicationTemplate> CreateTemplate(ApplicationTemplate applicationTemplate)
         {
-            var container = await _client.GetContainer();
-            var result = await container.CreateItemAsync(applicationTemplate,
+            var result = await _container.CreateItemAsync(applicationTemplate,
                 new PartitionKey(applicationTemplate.Id));
 
             return result;
@@ -24,14 +26,12 @@ namespace CPOnboardingAPI.Data
 
         public async Task DeleteTemplate(string id)
         {
-            var container = await _client.GetContainer();
-            await container.DeleteItemAsync<ApplicationTemplate>(id, new PartitionKey(id));
+            await _container.DeleteItemAsync<ApplicationTemplate>(id, new PartitionKey(id));
         }
 
         public async Task<IEnumerable<ApplicationTemplate>> GetAllTemplates()
         {
-            var container = await _client.GetContainer();
-            var query = container.GetItemQueryIterator<ApplicationTemplate>(new QueryDefinition("SELECT * FROM c"));
+            var query = _container.GetItemQueryIterator<ApplicationTemplate>(new QueryDefinition("SELECT * FROM c"));
             var results = new List<ApplicationTemplate>();
             while (query.HasMoreResults)
             {
@@ -45,8 +45,7 @@ namespace CPOnboardingAPI.Data
         {
             try
             {
-                var container = await _client.GetContainer();
-                var response = await container.ReadItemAsync<ApplicationTemplate>(id, new PartitionKey(id));
+                var response = await _container.ReadItemAsync<ApplicationTemplate>(id, new PartitionKey(id));
                 return response.Resource;
             }
             catch (CosmosException ex) when (ex.StatusCode == System.Net.HttpStatusCode.NotFound)
@@ -57,8 +56,7 @@ namespace CPOnboardingAPI.Data
 
         public async Task<ApplicationTemplate> UpdateTemplate(string id, ApplicationTemplate applicationTemplate)
         {
-            var container = await _client.GetContainer();
-            var response = await container.UpsertItemAsync(applicationTemplate, new PartitionKey(id));
+            var response = await _container.UpsertItemAsync(applicationTemplate, new PartitionKey(id));
             return response.Resource;
         }
     }

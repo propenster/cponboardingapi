@@ -1,6 +1,6 @@
 using CPOnboardingAPI.Data;
 using CPOnboardingAPI.Mappers;
-using CPOnboardingAPI.Services;
+using Microsoft.Azure.Cosmos;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,15 +19,19 @@ builder.Services.AddSwaggerGen(c =>
     });
 
 });
-builder.Services.AddSingleton<CosmosDbClient>();
-builder.Services.AddScoped<IRepository, Repository>();
+builder.Services.AddSingleton<IRepository, Repository>((provider) =>
+{
+    var cosmosClient = new CosmosClient(builder.Configuration.GetConnectionString("CosmosDbConnection"));
+    return new Repository(cosmosClient, builder.Configuration["DbConfig:DatabaseName"], builder.Configuration["DbConfig:ContainerName"]);
+
+});
 builder.Services.AddAutoMapper(typeof(MappingProfile));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    
+
 }
 
 app.UseSwagger();
