@@ -10,7 +10,6 @@ namespace CPOnboardingAPI.Dtos.Responses
         public string Id { get; set; } = string.Empty;
         public bool IsInternal { get; set; }
         public bool IsVisible { get; set; }
-        public string EmployerId { get; set; } = string.Empty; //this is the PartitionId on Cosmos , If we had authentication, this would probably be the UserId
         public string Title { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
         [Required]
@@ -20,7 +19,7 @@ namespace CPOnboardingAPI.Dtos.Responses
         public BaseQuestionResponse LastName { get; set; } = new();
         [Required]
         public BaseQuestionResponse Email { get; set; } = new();
-        public BaseQuestionResponse Phone { get; set; }
+        public BaseQuestionResponse Phone { get; set; } = new();
         [Required]
         public DropdownQuestionResponse Nationality { get; set; } = new(); //this is a dropwdown question of list of countries/nationalities
         [Required]

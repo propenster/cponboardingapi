@@ -7,10 +7,14 @@ namespace CPOnboardingAPI.Models
     /// </summary>
     public class YesOrNoQuestion : BaseQuestion
     {
+        public YesOrNoQuestion(bool isRequired) : base(isRequired)
+        {
+        }
+
         public YesOrNoQuestion(string type, string name, string title, bool isRequired) : base(type, name, title, isRequired)
         {
         }
         [MaxLength(2)]
-        public List<Option> Choices { get; set; } = new List<Option>(2); //YES or NO...
+        public List<Option> Options { get; set; } = new List<Option>(2); //YES or NO...
     }
 }

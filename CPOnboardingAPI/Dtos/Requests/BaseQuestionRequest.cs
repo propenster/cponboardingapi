@@ -1,4 +1,6 @@
-﻿namespace CPOnboardingAPI.Dtos.Requests
+﻿using CPOnboardingAPI.Models;
+
+namespace CPOnboardingAPI.Dtos.Requests
 {
     public class BaseQuestionRequest
     {
@@ -8,5 +10,9 @@
         public string Name { get; set; } = string.Empty; //each question should have a name e.g question1, 
         public string Title { get; set; } = string.Empty;
         public bool IsRequired { get; set; }
+
+        public List<Option>? Options { get; set; } 
+        public DateTime? DateValue { get; set; }
+        public double? Value { get; set; }
     }
 }

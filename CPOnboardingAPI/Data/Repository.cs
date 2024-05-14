@@ -56,7 +56,7 @@ namespace CPOnboardingAPI.Data
 
         public async Task<ApplicationTemplate> UpdateTemplate(string id, ApplicationTemplate applicationTemplate)
         {
-            var response = await _container.UpsertItemAsync(applicationTemplate, new PartitionKey(id));
+            var response = await _container.UpsertItemAsync(applicationTemplate, new PartitionKey(applicationTemplate.Id));
             return response.Resource;
         }
     }

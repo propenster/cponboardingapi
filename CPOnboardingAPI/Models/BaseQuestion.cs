@@ -1,8 +1,12 @@
 ﻿namespace CPOnboardingAPI.Models
 {
-    public abstract class BaseQuestion : BaseEntity //so our questions could have pk Id... IsVisible and IsInternal that are company-question-wide attributes
+    public class BaseQuestion : BaseEntity //so our questions could have pk Id... IsVisible and IsInternal that are company-question-wide attributes
     {
-        protected BaseQuestion(string type, string name, string title, bool isRequired)
+        public BaseQuestion()
+        {
+            
+        }
+        public BaseQuestion(string type, string name, string title, bool isRequired)
         {
             Type = type;
             Name = name;
